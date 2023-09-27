@@ -1,6 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//Arrays
+
+var characterAmount = [];
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -13,6 +17,21 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
+  // console.log("WOOHOO! You clicked on the big button.");
+  var numberCharacters = prompt(
+    "Please insert how many caracters you would like"
+  );
+
+  var number = parseInt(numberCharacters);
+
+  if (number >= 8 && number <= 128) {
+    characterAmount.push(number);
+  } else {
+    alert(
+      "You did not choose the correct criteria. Password length has to be between 8 to 128."
+    );
+  }
+
   //all code here
   //var numChar = window.prompt
   // console.log(numChar);
