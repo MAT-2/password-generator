@@ -30,7 +30,9 @@ function generatePassword() {
   var number = parseInt(numberCharacters);
 
   if (number >= 8 && number <= 128) {
-    characterAmount.push(number);
+    confirm(
+      "Excellent! We will now ask what you would like your password consist of."
+    );
   } else {
     alert(
       "You did not choose the correct criteria. Password length has to be between 8 to 128."
