@@ -1,9 +1,14 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//Arrays
+//Object for Options
 
-var characterAmount = [];
+var options = {
+  lowerCase: "abcdefghijklmnopqrstuvwxwyz",
+  upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  numbers: "0123456789",
+  specialCharacters: "!@#$%^&*()<>?",
+};
 
 // Write password to the #password input
 function writePassword() {
@@ -16,8 +21,8 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+//This function below will include all the work needed to get the password generator functioning.
 function generatePassword() {
-  // console.log("WOOHOO! You clicked on the big button.");
   var numberCharacters = prompt(
     "Please insert how many caracters you would like"
   );
