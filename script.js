@@ -39,6 +39,12 @@ function generatePassword() {
     );
   }
 
+  //We need to create confirm methods to ask what options the user wants to choose.
+  confirm("Would you like to have lower case letters?");
+  confirm("Would you like to include upper case leters?");
+  confirm("Would you like to have numbers involved?");
+  confirm("Will there be any special characters included?");
+
   //all code here
   //var numChar = window.prompt
   // console.log(numChar);
