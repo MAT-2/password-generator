@@ -1,14 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//Object for Options
-
-var options = {
-  lowerCase: "abcdefghijklmnopqrstuvwxwyz",
-  upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  numbers: "0123456789",
-  specialCharacters: "!@#$%^&*()<>?",
-};
+//A seleciton of variable containing each option the user can choose from.
+var lowerCase = "abcdefghijklmnopqrstuvwxwyz";
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789";
+var specialCharacters = "!@#$%^&*()<>?";
+var poolOfChoices = "";
 
 // Write password to the #password input
 function writePassword() {
@@ -40,10 +38,24 @@ function generatePassword() {
   }
 
   //We need to create confirm methods to ask what options the user wants to choose.
-  confirm("Would you like to have lower case letters?");
-  confirm("Would you like to include upper case leters?");
-  confirm("Would you like to have numbers involved?");
-  confirm("Will there be any special characters included?");
+  var lowerCaseChoice = confirm("Would you like to have lower case letters?");
+  if (lowerCaseChoice === true) {
+    poolOfChoices += lowerCase;
+  }
+  var upperCaseChoice = confirm("Would you like to include upper case leters?");
+  if (upperCaseChoice === true) {
+    poolOfChoices += upperCase;
+  }
+  var numberChoice = confirm("Would you like to have numbers involved?");
+  if (numberChoice === true) {
+    poolOfChoices += numbers;
+  }
+  var specialChoice = confirm("Will there be any special characters included?");
+  if (specialChoice === true) {
+    poolOfChoices += specialCharacters;
+  }
+
+  console.log("available: ", poolOfChoices);
 
   //all code here
   //var numChar = window.prompt
@@ -62,5 +74,5 @@ function generatePassword() {
   //Google this: How to randomly choose a value from an array;
   //var chosenArray = [];
   //Turn array into a string called password
-  return password;
+  // return password;
 }
