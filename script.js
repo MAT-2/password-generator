@@ -2,10 +2,60 @@
 var generateBtn = document.querySelector("#generate");
 
 //A seleciton of variable containing each option the user can choose from.
-var lowerCase = "abcdefghijklmnopqrstuvwxwyz";
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numbers = "0123456789";
-var specialCharacters = "!@#$%^&*()<>?";
+// var lowerCase = "abcdefghijklmnopqrstuvwxwyz";
+// var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// var numbers = "0123456789";
+// var specialCharacters = "!@#$%^&*()<>?";
+// var poolOfChoices = "";
+
+var lowerCase = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "w",
+  "y",
+  "z",
+];
+var upperCase = lowerCase.map((Element) => {
+  return Element.toUpperCase();
+});
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var specialCharacters = [
+  "!",
+  "@",
+  "#",
+  "$",
+  "%",
+  "^",
+  "&",
+  "*",
+  "(",
+  ")",
+  "<",
+  ">",
+  "?",
+];
 var poolOfChoices = "";
 
 // Write password to the #password input
