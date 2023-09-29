@@ -109,6 +109,9 @@ function generatePassword() {
 
   //We need a loop to helps us create a random choice of characters specifed from the users' decision of what kind of parameters the password should have at random given the amount of characters they request.
   //We need to access the array from poolOfChoices that stores all the details, and in brackets (since it is an array), use Math.floor and Math.random() when creating to randomly choose from the poolOfChoices array that contains the specified characters the user wants, and the length the user chose.
+
+  //Math.floor() is a method that only takes the integer part of the calculation. No floats.
+  //Math.random() is a method that returns a float between 0 and 1.
   for (var i = 0; i < numberCharacters; i++) {
     var random =
       poolOfChoices[Math.floor(Math.random() * poolOfChoices.length)];
