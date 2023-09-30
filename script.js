@@ -57,6 +57,7 @@ var specialCharacters = [
   "?",
 ];
 var poolOfChoices = [];
+var password = "";
 
 // Write password to the #password input
 function writePassword() {
@@ -116,6 +117,7 @@ function generatePassword() {
     var random =
       poolOfChoices[Math.floor(Math.random() * poolOfChoices.length)];
     console.log("random:", random);
+    password = password + random;
   }
   //all code here
   //var numChar = window.prompt
@@ -134,5 +136,5 @@ function generatePassword() {
   //Google this: How to randomly choose a value from an array;
   //var chosenArray = [];
   //Turn array into a string called password
-  // return password;
+  return password;
 }
